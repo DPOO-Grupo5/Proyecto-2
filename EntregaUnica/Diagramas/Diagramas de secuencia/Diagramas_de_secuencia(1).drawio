@@ -1,0 +1,1495 @@
+<mxfile host="app.diagrams.net" pages="7">
+  <diagram name="1. Inscribir jugador en equipo" id="seq1">
+    <mxGraphModel dx="2641" dy="1464" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="seq1_1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de secuencia 1 — Inscribir un jugador en un equipo" vertex="1">
+          <mxGeometry height="30" width="1850" x="40" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="RF-ADM-03 · RD-CON-02, RD-CON-03, RD-CON-04 · Actor: Administrador" vertex="1">
+          <mxGeometry height="24" width="1850" x="40" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="admin: Administrador" vertex="1">
+          <mxGeometry height="838" width="150" x="355" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="e: Equipo" vertex="1">
+          <mxGeometry height="838" width="150" x="615" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="s: Socio" vertex="1">
+          <mxGeometry height="838" width="150" x="875" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="c: Categoria" vertex="1">
+          <mxGeometry height="838" width="150" x="1135" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="d: DeporteConjunto" vertex="1">
+          <mxGeometry height="838" width="150" x="1395" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="ie: InscripcionEquipo" vertex="1">
+          <mxGeometry height="838" width="150" x="1655" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_9" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="620" width="10" x="425" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="550" width="10" x="685" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="945" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1205" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="22" width="10" x="690" y="402" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="945" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1465" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_16" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="22" width="10" x="690" y="582" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_17" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="1725" y="724" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;startArrow=oval;startFill=1;startSize=6;" value="inscribirJugadorEnEquipo(s, e, posicion, camiseta)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="190" as="sourcePoint" />
+            <mxPoint x="425" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="inscribirJugador(s, posicion, camiseta)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="226" as="sourcePoint" />
+            <mxPoint x="685" y="226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="calcularEdad(fechaInscripcion)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="262" as="sourcePoint" />
+            <mxPoint x="945" y="262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="edad">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="945" y="298" as="sourcePoint" />
+            <mxPoint x="695" y="298" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="admiteEdad(edad)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="332" as="sourcePoint" />
+            <mxPoint x="1205" y="332" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1205" y="368" as="sourcePoint" />
+            <mxPoint x="695" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="731" y="402" />
+              <mxPoint x="731" y="424" />
+            </Array>
+            <mxPoint x="695" y="402" as="sourcePoint" />
+            <mxPoint x="700" y="424" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="getEquipos()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="442" as="sourcePoint" />
+            <mxPoint x="945" y="442" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="List&amp;lt;Equipo&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="945" y="478" as="sourcePoint" />
+            <mxPoint x="695" y="478" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="esPosicionValida(posicion)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="512" as="sourcePoint" />
+            <mxPoint x="1465" y="512" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1465" y="548" as="sourcePoint" />
+            <mxPoint x="695" y="548" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="731" y="582" />
+              <mxPoint x="731" y="604" />
+            </Array>
+            <mxPoint x="695" y="582" as="sourcePoint" />
+            <mxPoint x="700" y="604" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalArgumentException(motivo)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685" y="666" as="sourcePoint" />
+            <mxPoint x="435" y="666" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» InscripcionEquipo(s, posicion, camiseta)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="728" as="sourcePoint" />
+            <mxPoint x="1725" y="728" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_32" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="InscripcionEquipo">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685" y="772" as="sourcePoint" />
+            <mxPoint x="435" y="772" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_33" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="InscripcionEquipo">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="806" as="sourcePoint" />
+            <mxPoint x="40" y="806" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_34" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="cuposDisponibles(): int" vertex="1">
+          <mxGeometry height="22" width="148" x="737" y="402" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_35" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="camisetaDisponible(camiseta): boolean" vertex="1">
+          <mxGeometry height="22" width="232" x="737" y="582" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_36" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Las reglas se evalúan en Equipo porque es quien conoce su cupo, su categoría, su deporte y las camisetas ya asignadas. &quot;Un equipo por deporte&quot; sale de comparar el deporte de los equipos de s (getEquipos)." vertex="1">
+          <mxGeometry height="44" width="1440" x="360" y="834" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_37" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="alt" vertex="1">
+          <mxGeometry height="122" width="1490" x="335" y="622" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_38" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[edad fuera de categoría, sin cupo, ya tiene equipo en ese deporte, posición inválida o camiseta repetida]" vertex="1">
+          <mxGeometry height="20" width="1430" x="387" y="622" as="geometry" />
+        </mxCell>
+        <mxCell id="seq1_39" edge="1" parent="1" style="html=1;endArrow=none;dashed=1;rounded=0;curved=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="684" as="sourcePoint" />
+            <mxPoint x="1825" y="684" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq1_40" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[todas las reglas se cumplen]" vertex="1">
+          <mxGeometry height="20" width="1474" x="343" y="686" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. Partido interno y sanción" id="seq2">
+    <mxGraphModel dx="1471" dy="816" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="seq2_1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de secuencia 2 — Registrar partido interno con suspensión por tarjeta" vertex="1">
+          <mxGeometry height="30" width="1940" x="40" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="RF-ENT-04 · RD-PAR-01 a RD-PAR-05 · Actor: Entrenador" vertex="1">
+          <mxGeometry height="24" width="1940" x="40" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="ent: Entrenador" vertex="1">
+          <mxGeometry height="1100" width="150" x="395" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="p: PartidoInterno" vertex="1">
+          <mxGeometry height="1100" width="150" x="665" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="a: Equipo" vertex="1">
+          <mxGeometry height="1100" width="150" x="935" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="j: Socio" vertex="1">
+          <mxGeometry height="1100" width="150" x="1205" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="sa: Sancion" vertex="1">
+          <mxGeometry height="1100" width="150" x="1475" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="est: EstadisticaJugadorFutbol" vertex="1">
+          <mxGeometry height="1100" width="150" x="1745" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_9" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="870" width="10" x="465" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="735" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="504" width="10" x="735" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1005" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="232" width="10" x="1005" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="110" width="10" x="1275" y="444" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1545" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_16" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="735" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_17" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="186" width="10" x="735" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_18" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="76" width="10" x="1815" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_19" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="1545" y="966" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;startArrow=oval;startFill=1;startSize=6;" value="registrarPartidoInterno(a, b, fecha, golesA, golesB, stats)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="190" as="sourcePoint" />
+            <mxPoint x="465" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» PartidoInterno(a, b, fecha)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="226" as="sourcePoint" />
+            <mxPoint x="735" y="226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="validarPuedeJugarse()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="262" as="sourcePoint" />
+            <mxPoint x="735" y="262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="cumpleMinimo()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="298" as="sourcePoint" />
+            <mxPoint x="1005" y="298" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1005" y="334" as="sourcePoint" />
+            <mxPoint x="745" y="334" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="getJugadoresHabilitados()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="368" as="sourcePoint" />
+            <mxPoint x="1005" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="getSancionesVigentes()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="448" as="sourcePoint" />
+            <mxPoint x="1275" y="448" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="estaVigente()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1285" y="484" as="sourcePoint" />
+            <mxPoint x="1545" y="484" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1545" y="520" as="sourcePoint" />
+            <mxPoint x="1285" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="List&amp;lt;Sancion&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1275" y="554" as="sourcePoint" />
+            <mxPoint x="1015" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="List&amp;lt;Socio&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1005" y="596" as="sourcePoint" />
+            <mxPoint x="745" y="596" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalStateException(el partido no puede jugarse)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="732" as="sourcePoint" />
+            <mxPoint x="475" y="732" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_32" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="registrarMarcador(golesA, golesB)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="774" as="sourcePoint" />
+            <mxPoint x="735" y="774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_33" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="registrarEstadistica(est)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="854" as="sourcePoint" />
+            <mxPoint x="735" y="854" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_34" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="generarSancion()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="934" as="sourcePoint" />
+            <mxPoint x="1815" y="934" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_35" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» Sancion(motivo, partidosSuspension = 1)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1815" y="970" as="sourcePoint" />
+            <mxPoint x="1555" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_36" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="Sancion">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1815" y="1006" as="sourcePoint" />
+            <mxPoint x="745" y="1006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_37" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="PartidoInterno">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="465" y="1056" as="sourcePoint" />
+            <mxPoint x="40" y="1056" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq2_38" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Se repite para el equipo contrario (b). Cada equipo necesita el mínimo de jugadores habilitados: 7 en fútbol, 5 en baloncesto y 6 en voleibol. Los suspendidos no cuentan." vertex="1">
+          <mxGeometry height="44" width="1220" x="400" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_39" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Siguiente partido del equipo: getJugadoresHabilitados() → getSancionesVigentes() → estaVigente() = true, por lo que el jugador queda fuera de la nómina habilitada. Al disputarse ese partido, Sancion.cumplir() la marca como cumplida. registrarMarcador rechaza el empate cuando DeporteConjunto.permiteEmpate() es false." vertex="1">
+          <mxGeometry height="56" width="1490" x="400" y="1084" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_40" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="loop" vertex="1">
+          <mxGeometry height="164" width="730" x="915" y="404" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_41" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[por cada jugador inscrito en el equipo]" vertex="1">
+          <mxGeometry height="20" width="670" x="967" y="404" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_42" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="58" width="730" x="375" y="688" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_43" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[un equipo no alcanza el mínimo, o no coinciden deporte y categoría]" vertex="1">
+          <mxGeometry height="20" width="670" x="427" y="688" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_44" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="130" width="1246" x="657" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_45" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[dos amarillas en el partido, o una roja]" vertex="1">
+          <mxGeometry height="20" width="1186" x="709" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_46" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="loop" vertex="1">
+          <mxGeometry height="218" width="1540" x="375" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="seq2_47" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[por cada jugador que participó]" vertex="1">
+          <mxGeometry height="20" width="1480" x="427" y="810" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3. Partido de competencia" id="seq3">
+    <mxGraphModel dx="3121" dy="1730" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="seq3_1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de secuencia 3 — Registrar partido de competencia y actualizar la clasificación" vertex="1">
+          <mxGeometry height="30" width="2130" x="40" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="RF-ENT-05 · RD-COM-03 a RD-COM-07 · Actor: Entrenador · Formato: FormatoLiga (Torneo de los Cerros) o FormatoPorFases (ASCUN)" vertex="1">
+          <mxGeometry height="24" width="2130" x="40" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="ent: Entrenador" vertex="1">
+          <mxGeometry height="1002" width="150" x="195" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="c: Competencia" vertex="1">
+          <mxGeometry height="1002" width="150" x="485" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="j: Socio" vertex="1">
+          <mxGeometry height="1002" width="150" x="775" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="p: PartidoCompetencia" vertex="1">
+          <mxGeometry height="1002" width="150" x="1065" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="f: Formato" vertex="1">
+          <mxGeometry height="1002" width="150" x="1355" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="r: ReglaPuntuacion" vertex="1">
+          <mxGeometry height="1002" width="150" x="1645" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_9" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="pe: PosicionEquipo" vertex="1">
+          <mxGeometry height="1002" width="150" x="1935" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="800" width="10" x="265" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="772" width="10" x="555" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="845" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="1135" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="426" width="10" x="1425" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="134" width="10" x="1430" y="604" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_16" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1715" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_17" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="2005" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_18" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="22" width="10" x="1430" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_19" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="22" width="10" x="1430" y="818" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_20" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="22" width="10" x="1430" y="902" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="registrarPartido(rival, fecha, escenario, marcador, stats)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="190" as="sourcePoint" />
+            <mxPoint x="555" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="getSancionesVigentes()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="270" as="sourcePoint" />
+            <mxPoint x="845" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="List&amp;lt;Sancion&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="845" y="306" as="sourcePoint" />
+            <mxPoint x="565" y="306" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalStateException(jugador no habilitado)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="555" y="446" as="sourcePoint" />
+            <mxPoint x="275" y="446" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» PartidoCompetencia(rival, fecha, escenario, marcador)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="488" as="sourcePoint" />
+            <mxPoint x="1135" y="488" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="registrarResultado(p)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="524" as="sourcePoint" />
+            <mxPoint x="1425" y="524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1471" y="604" />
+              <mxPoint x="1471" y="626" />
+            </Array>
+            <mxPoint x="1435" y="604" as="sourcePoint" />
+            <mxPoint x="1440" y="626" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="calcularPuntos(golesPropios, golesRival)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440" y="644" as="sourcePoint" />
+            <mxPoint x="1715" y="644" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="puntos">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1715" y="680" as="sourcePoint" />
+            <mxPoint x="1440" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="sumarPuntos(puntos)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440" y="714" as="sourcePoint" />
+            <mxPoint x="2005" y="714" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1471" y="750" />
+              <mxPoint x="1471" y="772" />
+            </Array>
+            <mxPoint x="1435" y="750" as="sourcePoint" />
+            <mxPoint x="1440" y="772" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_32" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1471" y="818" />
+              <mxPoint x="1471" y="840" />
+            </Array>
+            <mxPoint x="1435" y="818" as="sourcePoint" />
+            <mxPoint x="1440" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_33" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1471" y="902" />
+              <mxPoint x="1471" y="924" />
+            </Array>
+            <mxPoint x="1435" y="902" as="sourcePoint" />
+            <mxPoint x="1440" y="924" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_34" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="PartidoCompetencia">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="555" y="958" as="sourcePoint" />
+            <mxPoint x="275" y="958" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_35" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="actualizarPosiciones(p)" vertex="1">
+          <mxGeometry height="22" width="148" x="1477" y="604" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_36" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="ordenarTabla()" vertex="1">
+          <mxGeometry height="22" width="94" x="1477" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_37" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="resolverEnfrentamiento(a, b)" vertex="1">
+          <mxGeometry height="22" width="178" x="1477" y="818" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_38" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="avanzarAFaseEliminacion()" vertex="1">
+          <mxGeometry height="22" width="160" x="1477" y="902" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_39" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="También se verifica que cada jugador esté en la nómina de la competencia (RD-COM-03) y que no tenga sanción vigente (RD-COM-06)." vertex="1">
+          <mxGeometry height="40" width="430" x="490" y="342" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_40" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Las tarjetas generan Sancion con EstadisticaJugadorFutbol.generarSancion() (ver diagrama 2) y las estadísticas se acumulan por competencia en getClasificacion(estadistica) para el goleador del torneo. ReglaFutbol da 3/1/0 puntos; ReglaBaloncesto y ReglaVoleibol no admiten empate." vertex="1">
+          <mxGeometry height="56" width="1880" x="200" y="986" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_41" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="loop" vertex="1">
+          <mxGeometry height="94" width="480" x="465" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_42" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[por cada jugador en stats]" vertex="1">
+          <mxGeometry height="20" width="420" x="517" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_43" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="58" width="770" x="175" y="402" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_44" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[jugador fuera de la nómina o suspendido]" vertex="1">
+          <mxGeometry height="20" width="710" x="227" y="402" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_45" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="64" width="746" x="1347" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_46" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[terminó la fase de grupos]" vertex="1">
+          <mxGeometry height="20" width="686" x="1399" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_47" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="alt" vertex="1">
+          <mxGeometry height="370" width="770" x="1335" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_48" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[f es FormatoLiga]" vertex="1">
+          <mxGeometry height="20" width="710" x="1387" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="seq3_49" edge="1" parent="1" style="html=1;endArrow=none;dashed=1;rounded=0;curved=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1335" y="774" as="sourcePoint" />
+            <mxPoint x="2105" y="774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq3_50" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[f es FormatoPorFases]" vertex="1">
+          <mxGeometry height="20" width="754" x="1343" y="776" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4. Reservar instalación" id="seq4">
+    <mxGraphModel dx="3815" dy="2115" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="seq4_1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de secuencia 4 — Reservar una instalación" vertex="1">
+          <mxGeometry height="30" width="1720" x="40" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="RF-SOC-03 · RD-IND-03, RD-IND-04, RD-ENT-03, RD-TC-06 · Actor: Socio" vertex="1">
+          <mxGeometry height="24" width="1720" x="40" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="s: Socio" vertex="1">
+          <mxGeometry height="1012" width="150" x="365" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="i: Instalacion" vertex="1">
+          <mxGeometry height="1012" width="150" x="655" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="r: Reserva (existentes)" vertex="1">
+          <mxGeometry height="1012" width="150" x="945" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="dis: DisciplinaIndividual" vertex="1">
+          <mxGeometry height="1012" width="150" x="1235" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="nueva: Reserva" vertex="1">
+          <mxGeometry height="1012" width="150" x="1525" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_8" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="794" width="10" x="435" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_9" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="68" width="10" x="440" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="22" width="10" x="445" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="725" y="302" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="725" y="458" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="162" width="10" x="725" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1015" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1305" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_16" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="1595" y="896" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_17" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="1595" y="932" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;startArrow=oval;startFill=1;startSize=6;" value="reservarInstalacion(inst, ini, fin, jugadores, modalidad)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="190" as="sourcePoint" />
+            <mxPoint x="435" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="481" y="226" />
+              <mxPoint x="481" y="248" />
+            </Array>
+            <mxPoint x="445" y="226" as="sourcePoint" />
+            <mxPoint x="450" y="248" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="486" y="266" />
+              <mxPoint x="486" y="288" />
+            </Array>
+            <mxPoint x="450" y="266" as="sourcePoint" />
+            <mxPoint x="455" y="288" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="isTechada()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="306" as="sourcePoint" />
+            <mxPoint x="725" y="306" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="342" as="sourcePoint" />
+            <mxPoint x="445" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalStateException(bebida caliente)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="420" as="sourcePoint" />
+            <mxPoint x="40" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="admiteJugadores(jugadores, modalidad)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="462" as="sourcePoint" />
+            <mxPoint x="725" y="462" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="498" as="sourcePoint" />
+            <mxPoint x="445" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="estaDisponible(ini, fin)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="532" as="sourcePoint" />
+            <mxPoint x="725" y="532" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="seTraslapaCon(ini, fin)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="612" as="sourcePoint" />
+            <mxPoint x="1015" y="612" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="648" as="sourcePoint" />
+            <mxPoint x="735" y="648" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="690" as="sourcePoint" />
+            <mxPoint x="445" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="hayCupoSimultaneo(ini, fin, reservas)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="724" as="sourcePoint" />
+            <mxPoint x="1305" y="724" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1305" y="760" as="sourcePoint" />
+            <mxPoint x="445" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_32" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalStateException(motivo)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="838" as="sourcePoint" />
+            <mxPoint x="40" y="838" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_33" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» Reserva(inst, ini, fin, jugadores, modalidad)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="900" as="sourcePoint" />
+            <mxPoint x="1595" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_34" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="validar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="936" as="sourcePoint" />
+            <mxPoint x="1595" y="936" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_35" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="Reserva">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="435" y="980" as="sourcePoint" />
+            <mxPoint x="40" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_36" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="tieneBebidaCalienteReciente(ahora): boolean" vertex="1">
+          <mxGeometry height="22" width="268" x="487" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_37" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="consultarHistorialCompras()" vertex="1">
+          <mxGeometry height="22" width="172" x="492" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_38" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Capacidad (RD-IND-03): tenis 2 sencillos o 4 dobles, pádel 4, tenis de mesa 2 o 4. El cupo simultáneo (RD-IND-04) lo evalúa DisciplinaIndividual con su atributo maxInstalaciones." vertex="1">
+          <mxGeometry height="44" width="1300" x="370" y="1008" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_39" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="58" width="480" x="345" y="376" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_40" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[bebida caliente (últimos 30 min) y cancha de pádel o mesa techada]" vertex="1">
+          <mxGeometry height="20" width="420" x="397" y="376" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_41" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="loop" vertex="1">
+          <mxGeometry height="94" width="480" x="635" y="568" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_42" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[por cada reserva existente r de la instalación]" vertex="1">
+          <mxGeometry height="20" width="420" x="687" y="568" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_43" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="alt" vertex="1">
+          <mxGeometry height="158" width="1350" x="345" y="794" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_44" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[capacidad excedida, traslape o cupo simultáneo completo]" vertex="1">
+          <mxGeometry height="20" width="1290" x="397" y="794" as="geometry" />
+        </mxCell>
+        <mxCell id="seq4_45" edge="1" parent="1" style="html=1;endArrow=none;dashed=1;rounded=0;curved=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="856" as="sourcePoint" />
+            <mxPoint x="1695" y="856" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq4_46" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[la reserva es válida]" vertex="1">
+          <mxGeometry height="20" width="1334" x="353" y="858" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="5. Partido de práctica y ranking" id="seq5">
+    <mxGraphModel dx="2575" dy="1428" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="seq5_1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de secuencia 5 — Programar partido de práctica y actualizar el ranking" vertex="1">
+          <mxGeometry height="30" width="1500" x="40" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="RF-SOC-04, RF-SOC-05 · RD-IND-05, RD-IND-06 · Actor: Socio" vertex="1">
+          <mxGeometry height="24" width="1500" x="40" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="a: Socio" vertex="1">
+          <mxGeometry height="804" width="150" x="345" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="pp: PartidoPractica" vertex="1">
+          <mxGeometry height="804" width="150" x="665" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="insA: InscripcionDisciplina" vertex="1">
+          <mxGeometry height="804" width="150" x="985" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="insB: InscripcionDisciplina" vertex="1">
+          <mxGeometry height="804" width="150" x="1305" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_7" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="430" width="10" x="415" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_8" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="735" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_9" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="346" width="10" x="735" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="1055" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="22" width="10" x="1060" y="448" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="106" width="10" x="415" y="692" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="100" width="10" x="735" y="698" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="1055" y="734" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="1375" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_16" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;startArrow=oval;startFill=1;startSize=6;" value="programarPartidoPractica(rival, d, modalidad)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="190" as="sourcePoint" />
+            <mxPoint x="415" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» PartidoPractica(a, rival, d, modalidad)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="226" as="sourcePoint" />
+            <mxPoint x="735" y="226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="validarNiveles()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="262" as="sourcePoint" />
+            <mxPoint x="735" y="262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="puedeJugarCon(insB)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="412" as="sourcePoint" />
+            <mxPoint x="1055" y="412" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1101" y="448" />
+              <mxPoint x="1101" y="470" />
+            </Array>
+            <mxPoint x="1065" y="448" as="sourcePoint" />
+            <mxPoint x="1070" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1055" y="488" as="sourcePoint" />
+            <mxPoint x="745" y="488" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalArgumentException(niveles incompatibles)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="566" as="sourcePoint" />
+            <mxPoint x="425" y="566" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="PartidoPractica">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="616" as="sourcePoint" />
+            <mxPoint x="40" y="616" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="registrarResultado(statsA, statsB)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="702" as="sourcePoint" />
+            <mxPoint x="735" y="702" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="actualizarRanking(gano, rankingRival)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="738" as="sourcePoint" />
+            <mxPoint x="1055" y="738" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="actualizarRanking(!gano, rankingRival)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="774" as="sourcePoint" />
+            <mxPoint x="1375" y="774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_27" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="esNivelAdyacente(insB.nivel)" vertex="1">
+          <mxGeometry height="22" width="178" x="1107" y="448" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_28" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="No se restringe la diferencia de niveles (RD-IND-05)." vertex="1">
+          <mxGeometry height="28" width="780" x="670" y="336" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_29" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="— Después de jugar el partido (RF-SOC-05) —" vertex="1">
+          <mxGeometry height="28" width="1100" x="350" y="654" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_30" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="El ranking sigue un ELO simplificado: cada InscripcionDisciplina ajusta su puntajeRanking según el resultado y el ranking del rival." vertex="1">
+          <mxGeometry height="40" width="1100" x="350" y="804" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_31" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="58" width="806" x="657" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_32" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[niveles no iguales ni adyacentes]" vertex="1">
+          <mxGeometry height="20" width="746" x="709" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_33" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="alt" vertex="1">
+          <mxGeometry height="290" width="830" x="645" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_34" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[participa un Entrenador]" vertex="1">
+          <mxGeometry height="20" width="770" x="697" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="seq5_35" edge="1" parent="1" style="html=1;endArrow=none;dashed=1;rounded=0;curved=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="368" as="sourcePoint" />
+            <mxPoint x="1475" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq5_36" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[ambos jugadores son socios]" vertex="1">
+          <mxGeometry height="20" width="814" x="653" y="370" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="6. Compra en tienda o cafetería" id="seq6">
+    <mxGraphModel dx="2641" dy="1464" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="seq6_1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de secuencia 6 — Comprar en la tienda o en la cafetería" vertex="1">
+          <mxGeometry height="30" width="1870" x="40" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="RF-SOC-07, RF-SOC-08, RF-EMP-03, RF-EMP-04 · RD-TC-01 a RD-TC-08 · Actor: Socio (si compra un Empleado el flujo es el mismo)" vertex="1">
+          <mxGeometry height="24" width="1870" x="40" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="s: Socio" vertex="1">
+          <mxGeometry height="1892" width="150" x="325" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="t: Transaccion" vertex="1">
+          <mxGeometry height="1892" width="150" x="595" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="ex: Existencia" vertex="1">
+          <mxGeometry height="1892" width="150" x="865" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="b: Bebida" vertex="1">
+          <mxGeometry height="1892" width="150" x="1135" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="sn: Snack" vertex="1">
+          <mxGeometry height="1892" width="150" x="1405" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="emp: Empleado" vertex="1">
+          <mxGeometry height="1892" width="150" x="1675" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_9" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="1662" width="10" x="395" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="665" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="560" width="10" x="665" y="302" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="935" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="110" width="10" x="1205" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="400" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1475" y="792" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_16" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="665" y="878" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_17" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="98" width="10" x="665" y="992" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_18" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1745" y="1028" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_19" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="168" width="10" x="665" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_20" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1745" y="1186" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_21" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1745" y="1256" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_22" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="665" y="1378" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_23" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="665" y="1422" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_24" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="665" y="1536" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_25" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="665" y="1614" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_26" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="152" width="10" x="665" y="1684" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_27" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="935" y="1764" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_28" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="400" y="1808" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;startArrow=oval;startFill=1;startSize=6;" value="iniciarTransaccion(productos, rubro)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="190" as="sourcePoint" />
+            <mxPoint x="395" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» Transaccion(fechaHora, rubro)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="226" as="sourcePoint" />
+            <mxPoint x="665" y="226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="agregarDetalle(p, cant)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="306" as="sourcePoint" />
+            <mxPoint x="665" y="306" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_32" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="hayDisponible(cant)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="342" as="sourcePoint" />
+            <mxPoint x="935" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_33" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="935" y="378" as="sourcePoint" />
+            <mxPoint x="675" y="378" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_34" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalStateException(inventario insuficiente)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="456" as="sourcePoint" />
+            <mxPoint x="405" y="456" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_35" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="puedeDespacharseA(s, ahora)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="542" as="sourcePoint" />
+            <mxPoint x="1205" y="542" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_36" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="estaEnInstalacion(ahora)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1205" y="578" as="sourcePoint" />
+            <mxPoint x="410" y="578" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_37" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="614" as="sourcePoint" />
+            <mxPoint x="1205" y="614" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_38" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1205" y="648" as="sourcePoint" />
+            <mxPoint x="675" y="648" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_39" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;fontColor=#B85450;" value="«excepción» IllegalStateException(bebida caliente no permitida)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="726" as="sourcePoint" />
+            <mxPoint x="405" y="726" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_40" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="getAlergenos()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="796" as="sourcePoint" />
+            <mxPoint x="1475" y="796" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_41" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="List&amp;lt;String&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1475" y="832" as="sourcePoint" />
+            <mxPoint x="675" y="832" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_42" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="calcularSubtotal()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="882" as="sourcePoint" />
+            <mxPoint x="665" y="882" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_43" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="double">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="918" as="sourcePoint" />
+            <mxPoint x="405" y="918" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_44" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="aplicarDescuentoEmpleado(emp)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="996" as="sourcePoint" />
+            <mxPoint x="665" y="996" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_45" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="getPorcentajeDescuentoPropio()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="1032" as="sourcePoint" />
+            <mxPoint x="1745" y="1032" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_46" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="double">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1745" y="1068" as="sourcePoint" />
+            <mxPoint x="675" y="1068" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_47" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="aplicarDescuentoCompartido(codigo, emp)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="1154" as="sourcePoint" />
+            <mxPoint x="665" y="1154" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_48" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="validarCodigo(codigo)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="1190" as="sourcePoint" />
+            <mxPoint x="1745" y="1190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_49" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1745" y="1226" as="sourcePoint" />
+            <mxPoint x="675" y="1226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_50" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="getPorcentajeDescuentoCompartido()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="1260" as="sourcePoint" />
+            <mxPoint x="1745" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_51" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="double">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1745" y="1296" as="sourcePoint" />
+            <mxPoint x="675" y="1296" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_52" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="redimirPuntos(puntos)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="1382" as="sourcePoint" />
+            <mxPoint x="665" y="1382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_53" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="calcularImpuestos()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="1426" as="sourcePoint" />
+            <mxPoint x="665" y="1426" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_54" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="double">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="1462" as="sourcePoint" />
+            <mxPoint x="405" y="1462" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_55" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="calcularPropina(0.10)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="1540" as="sourcePoint" />
+            <mxPoint x="665" y="1540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_56" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="double">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="1576" as="sourcePoint" />
+            <mxPoint x="405" y="1576" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_57" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="calcularPuntosGenerados()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="1618" as="sourcePoint" />
+            <mxPoint x="665" y="1618" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_58" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="int">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="1654" as="sourcePoint" />
+            <mxPoint x="405" y="1654" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_59" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="confirmar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="1688" as="sourcePoint" />
+            <mxPoint x="665" y="1688" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_60" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="disminuir(cant)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="1768" as="sourcePoint" />
+            <mxPoint x="935" y="1768" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_61" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="acumularPuntos(puntosGenerados)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="1812" as="sourcePoint" />
+            <mxPoint x="410" y="1812" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_62" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="Transaccion">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395" y="1848" as="sourcePoint" />
+            <mxPoint x="40" y="1848" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_63" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Orden de cálculo: descuentos → redención de puntos → impuestos (IVA 19 % en tienda, impuesto al consumo 8 % en cafetería) → propina sugerida 10 %, modificable. Los puntos generados son el 2 % del valor (1 punto = 1 peso). El rubro permite luego los reportes de ventas." vertex="1">
+          <mxGeometry height="56" width="1490" x="330" y="1876" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_64" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="58" width="706" x="317" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_65" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[no hay existencias suficientes]" vertex="1">
+          <mxGeometry height="20" width="646" x="369" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_66" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="58" width="682" x="599" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_67" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[bebida caliente y socio en cancha de pádel o mesa techada]" vertex="1">
+          <mxGeometry height="20" width="622" x="651" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_68" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="alt" vertex="1">
+          <mxGeometry height="348" width="706" x="587" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_69" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[p es Bebida]" vertex="1">
+          <mxGeometry height="20" width="646" x="639" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_70" edge="1" parent="1" style="html=1;endArrow=none;dashed=1;rounded=0;curved=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="587" y="752" as="sourcePoint" />
+            <mxPoint x="1293" y="752" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq6_71" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[p es Snack]" vertex="1">
+          <mxGeometry height="20" width="690" x="595" y="754" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_72" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="loop" vertex="1">
+          <mxGeometry height="592" width="1270" x="305" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_73" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[por cada producto p con su cantidad]" vertex="1">
+          <mxGeometry height="20" width="1210" x="357" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_74" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="130" width="1540" x="305" y="952" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_75" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[comprador es Empleado: 15 %]" vertex="1">
+          <mxGeometry height="20" width="1480" x="357" y="952" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_76" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="200" width="1540" x="305" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_77" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[usa código compartido: 8 %]" vertex="1">
+          <mxGeometry height="20" width="1480" x="357" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_78" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="60" width="460" x="305" y="1338" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_79" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[redime puntos de fidelidad]" vertex="1">
+          <mxGeometry height="20" width="400" x="357" y="1338" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_80" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="opt" vertex="1">
+          <mxGeometry height="94" width="460" x="305" y="1496" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_81" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[rubro = cafetería]" vertex="1">
+          <mxGeometry height="20" width="400" x="357" y="1496" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_82" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="loop" vertex="1">
+          <mxGeometry height="60" width="460" x="575" y="1724" as="geometry" />
+        </mxCell>
+        <mxCell id="seq6_83" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[por cada detalle]" vertex="1">
+          <mxGeometry height="20" width="400" x="627" y="1724" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="7. Cambio de turno" id="seq7">
+    <mxGraphModel dx="3121" dy="1730" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="seq7_1" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Diagrama de secuencia 7 — Solicitar y resolver un cambio de turno" vertex="1">
+          <mxGeometry height="30" width="1680" x="40" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_2" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="RF-EMP-02, RF-ADM-08 · RD-ADM-01 · Actores: Empleado (entrenador o fisioterapeuta) y Administrador" vertex="1">
+          <mxGeometry height="24" width="1680" x="40" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="emp: Empleado" vertex="1">
+          <mxGeometry height="832" width="150" x="285" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="admin: Administrador" vertex="1">
+          <mxGeometry height="832" width="150" x="585" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="sol: SolicitudCambioTurno" vertex="1">
+          <mxGeometry height="832" width="150" x="885" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="e: Empleado" vertex="1">
+          <mxGeometry height="832" width="150" x="1185" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fontStyle=1;" value="t: Turno" vertex="1">
+          <mxGeometry height="832" width="150" x="1485" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_8" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="76" width="10" x="355" y="226" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_9" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="955" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="442" width="10" x="655" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="232" width="10" x="955" y="416" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1255" y="496" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1555" y="566" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="955" y="722" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="28" width="10" x="955" y="786" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_16" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;startArrow=oval;startFill=1;startSize=6;" value="solicitarCambioTurno(actual, deseado)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="230" as="sourcePoint" />
+            <mxPoint x="355" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="«create» SolicitudCambioTurno(actual, deseado) · estado = PENDIENTE">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="266" as="sourcePoint" />
+            <mxPoint x="955" y="266" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="SolicitudCambioTurno">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="355" y="302" as="sourcePoint" />
+            <mxPoint x="40" y="302" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;startArrow=oval;startFill=1;startSize=6;" value="resolverCambioTurno(sol, empleados, aprobar)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="384" as="sourcePoint" />
+            <mxPoint x="655" y="384" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="cumpleCobertura(empleados)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="420" as="sourcePoint" />
+            <mxPoint x="955" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="consultarTurnos()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="965" y="500" as="sourcePoint" />
+            <mxPoint x="1255" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="List&amp;lt;Turno&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1255" y="536" as="sourcePoint" />
+            <mxPoint x="965" y="536" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="cubre(dia, hora)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="965" y="570" as="sourcePoint" />
+            <mxPoint x="1555" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1555" y="606" as="sourcePoint" />
+            <mxPoint x="965" y="606" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endFill=0;dashed=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="boolean">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="955" y="648" as="sourcePoint" />
+            <mxPoint x="665" y="648" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="aprobar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="726" as="sourcePoint" />
+            <mxPoint x="955" y="726" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;curved=0;rounded=0;labelBackgroundColor=default;fontSize=11;" value="rechazar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="665" y="790" as="sourcePoint" />
+            <mxPoint x="955" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_28" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Fase 1 — El empleado solicita el cambio (RF-EMP-02)" vertex="1">
+          <mxGeometry height="26" width="1340" x="290" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_29" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="Fase 2 — El administrador resuelve la solicitud (RF-ADM-08)" vertex="1">
+          <mxGeometry height="26" width="1340" x="290" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_30" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=8;align=left;spacingLeft=6;spacingRight=4;fontSize=11;verticalAlign=middle;" value="La cobertura se evalúa simulando el cambio: el turno actual queda libre y el turno deseado queda ocupado por el solicitante. El mínimo exigido durante el horario de atención es 2 entrenadores y 1 fisioterapeuta." vertex="1">
+          <mxGeometry height="44" width="1340" x="290" y="828" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_31" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="loop" vertex="1">
+          <mxGeometry height="164" width="790" x="865" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_32" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[por cada empleado e y franja del horario de atención]" vertex="1">
+          <mxGeometry height="20" width="730" x="917" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_33" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=45;height=20;boundedLbl=1;fontSize=11;fontStyle=1;" value="alt" vertex="1">
+          <mxGeometry height="124" width="1090" x="565" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_34" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[aprobar y se mantienen 2 entrenadores y 1 fisioterapeuta]" vertex="1">
+          <mxGeometry height="20" width="1030" x="617" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="seq7_35" edge="1" parent="1" style="html=1;endArrow=none;dashed=1;rounded=0;curved=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565" y="746" as="sourcePoint" />
+            <mxPoint x="1655" y="746" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="seq7_36" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=nowrap;" value="[no aprobar, o el cambio rompe la cobertura mínima]" vertex="1">
+          <mxGeometry height="20" width="1074" x="573" y="748" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

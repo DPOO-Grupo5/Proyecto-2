@@ -1,0 +1,17 @@
+id;InscripcionEquipo.socio;InscripcionEquipo.equipo;InscripcionEquipo.posicion;InscripcionEquipo.numeroCamiseta;InscripcionEquipo.fechaInscripcion;InscripcionEquipo.fechaRetiro
+65;@5;@27;delantero;9;2026-11-08;
+74;@8;@26;delantero;10;2026-11-08;
+81;@10;@26;mediocampista;6;2026-11-08;
+84;@12;@26;delantero;7;2026-11-08;
+85;@13;@27;portero;1;2026-11-08;
+86;@14;@27;defensa;2;2026-11-08;
+88;@15;@26;defensa;2;2026-11-08;
+89;@16;@27;mediocampista;6;2026-11-08;
+90;@17;@26;defensa;3;2026-11-08;
+91;@18;@27;delantero;7;2026-11-08;
+92;@19;@26;defensa;4;2026-11-08;
+93;@20;@26;mediocampista;5;2026-11-08;
+100;@22;@27;defensa;3;2026-11-08;
+101;@23;@27;defensa;4;2026-11-08;
+104;@24;@26;portero;1;2026-11-08;
+105;@25;@27;mediocampista;5;2026-11-08;

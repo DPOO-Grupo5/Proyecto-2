@@ -1,0 +1,6 @@
+id;Usuario.login;Usuario.nombre;Usuario.puntosFidelidad;Usuario.password;Usuario.descuento;Usuario.transacciones;Empleado.codigoDescuento;Empleado.turnos;Empleado.solicitudes;Empleado.sugerencias;Empleado.codigoDesactivado;Entrenador.sesiones;Entrenador.disciplinas;Entrenador.reservas
+3;entrenador4.demo;Sofía Martínez;0;pbkdf2$120000$fEu5spPCOd3mkSdsaKaf7w\=\=$gHajUFjlKnq4wIEAZhUIPok9DVrdgHzOf52m/qA71cg\=;0.0;[];ENTRE4;@51|@52|@53|@54|@55|@56;[];[];false;[];[];[]
+4;entrenador.demo;Carlos Rojas;0;pbkdf2$120000$d2feT4g99OVO9SKKNbVVqA\=\=$o3q/w6gxdL2cizCmr0BMLSsLPzCi+g09ac5oXwlB3+g\=;0.0;[];ENTRE15;@57|@58|@59|@60|@61|@62;[];[];false;[];[];[]
+7;entrenador3.demo;Andrés Pérez;0;pbkdf2$120000$HooFZVGhlFKB+ngyJV/eIw\=\=$uf4nyz8lOfVYOq0o/RB91eL10+liX97IWsg0/wzRfNA\=;0.0;[];ENTRE3;@66|@67|@68|@69|@70|@71;[];[];false;[];[];[]
+11;entrenador5.demo;Diego Castro;0;pbkdf2$120000$HkIKCRMegsrA/jrW3uNLfw\=\=$j5DGTwl1GVzms+c7VJzIRFkEr+mU/3rkKN8bcBiuTtg\=;0.0;[];ENTRE5;@82|@83;[];[];false;[];[];[]
+21;entrenador2.demo;Laura Gómez;0;pbkdf2$120000$StywTN7z6ZZ00HqFJVyXIw\=\=$3KQ9080fMmstzG8PImyajwpOxrfHsZAA1OTjnqBLpHc\=;0.0;[];ENTRE2;@94|@95|@96|@97|@98|@99;[];[];false;[];[];[]
