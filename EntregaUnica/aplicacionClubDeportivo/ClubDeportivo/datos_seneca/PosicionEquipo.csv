@@ -1,4 +1,4 @@
 id;PosicionEquipo.puntuacion;PosicionEquipo.posicion;PosicionEquipo.partidosJugados;PosicionEquipo.victorias;PosicionEquipo.empates;PosicionEquipo.derrotas;PosicionEquipo.tantosFavor;PosicionEquipo.tantosContra;PosicionEquipo.equipo
-125;0;1;0;0;0;0;0;0;@26
-126;0;2;0;0;0;0;0;0;@110
-127;0;3;0;0;0;0;0;0;@109
+127;0;1;0;0;0;0;0;0;@26
+128;0;2;0;0;0;0;0;0;@111
+129;0;3;0;0;0;0;0;0;@110

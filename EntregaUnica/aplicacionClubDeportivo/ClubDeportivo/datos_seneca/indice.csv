@@ -17,6 +17,7 @@ club.modelo.entrenamiento.Tenis;Tenis.csv;1
 club.modelo.entrenamiento.Padel;Padel.csv;1
 club.modelo.entrenamiento.TenisMesa;TenisMesa.csv;1
 club.modelo.usuarios.Turno;Turno.csv;38
+club.modelo.tienda.Transaccion;Transaccion.csv;1
 club.modelo.entrenamiento.InscripcionDisciplina;InscripcionDisciplina.csv;7
 club.modelo.competencias.InscripcionEquipo;InscripcionEquipo.csv;16
 club.modelo.competencias.Categoria;Categoria.csv;1
@@ -26,5 +27,6 @@ club.modelo.competencias.InstitucionRival;InstitucionRival.csv;2
 club.modelo.competencias.InscripcionCompetencia;InscripcionCompetencia.csv;3
 club.modelo.competencias.PartidoCompetencia;PartidoCompetencia.csv;3
 club.modelo.tienda.Existencia;Existencia.csv;7
+club.modelo.tienda.DetalleTransaccion;DetalleTransaccion.csv;1
 club.modelo.competencias.ReglaFutbol;ReglaFutbol.csv;1
 club.modelo.competencias.PosicionEquipo;PosicionEquipo.csv;3

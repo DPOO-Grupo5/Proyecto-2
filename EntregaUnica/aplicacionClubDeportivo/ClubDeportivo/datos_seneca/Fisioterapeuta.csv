@@ -1,3 +1,3 @@
-id;Usuario.login;Usuario.nombre;Usuario.puntosFidelidad;Usuario.password;Usuario.descuento;Usuario.transacciones;Empleado.codigoDescuento;Empleado.turnos;Empleado.solicitudes;Empleado.sugerencias;Empleado.codigoDesactivado
-2;fisio2.demo;Mateo Herrera;0;pbkdf2$120000$5FvzB+3kmCfEv0/DulDgDQ\=\=$DezF4tyTWa3D5hIzQBIekR+FmKUkyyPx6deWwqm1aC0\=;0.0;[];FISIO2;@45|@46|@47|@48|@49|@50;[];[];false
-9;fisio.demo;Valentina Ruiz;0;pbkdf2$120000$djSM/PDdUmq6IFczhEUj1w\=\=$Z5poFshdReC2b/Faq2ZhPAsAOPDM6oxwtlBzFO0Afh4\=;0.0;[];FISIO15;@75|@76|@77|@78|@79|@80;[];[];false
+id;Usuario.login;Usuario.nombre;Usuario.puntosFidelidad;Usuario.password;Usuario.descuento;Usuario.codigoGuardado;Usuario.transacciones;Empleado.codigoDescuento;Empleado.turnos;Empleado.solicitudes;Empleado.sugerencias;Empleado.codigoDesactivado
+2;fisio2.demo;Mateo Herrera;0;pbkdf2$120000$5FvzB+3kmCfEv0/DulDgDQ\=\=$DezF4tyTWa3D5hIzQBIekR+FmKUkyyPx6deWwqm1aC0\=;0.0;;[];FISIO2;@45|@46|@47|@48|@49|@50;[];[];false
+9;fisio.demo;Valentina Ruiz;0;pbkdf2$120000$djSM/PDdUmq6IFczhEUj1w\=\=$Z5poFshdReC2b/Faq2ZhPAsAOPDM6oxwtlBzFO0Afh4\=;0.0;;[];FISIO15;@76|@77|@78|@79|@80|@81;[];[];false

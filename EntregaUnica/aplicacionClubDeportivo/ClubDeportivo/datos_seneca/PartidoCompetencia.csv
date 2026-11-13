@@ -1,4 +1,4 @@
 id;PartidoCompetencia.fecha;PartidoCompetencia.marcador;PartidoCompetencia.escenario;PartidoCompetencia.marcadorLocal;PartidoCompetencia.marcadorVisitante;PartidoCompetencia.finalizado;PartidoCompetencia.competencia;PartidoCompetencia.grupo;PartidoCompetencia.equipos;PartidoCompetencia.estadisticas;PartidoCompetencia.sancionadosEnEstePartido;PartidoCompetencia.ganadorPorDesempate;PartidoCompetencia.programado;PartidoCompetencia.entrenadorResponsable;PartidoCompetencia.alineacionLocal;PartidoCompetencia.alineacionVisitante
-114;2026-11-21;Pendiente;Estadio Séneca;0;0;false;@28;;@26|@109;[];[];;true;@4;[];[]
-115;;Pendiente;Por definir;0;0;false;@28;;@26|@110;[];[];;false;;[];[]
-116;;Pendiente;Por definir;0;0;false;@28;;@109|@110;[];[];;false;;[];[]
+115;2026-11-21;Pendiente;Estadio Séneca;0;0;false;@28;;@26|@110;[];[];;true;@4;[];[]
+116;;Pendiente;Por definir;0;0;false;@28;;@26|@111;[];[];;false;;[];[]
+117;;Pendiente;Por definir;0;0;false;@28;;@110|@111;[];[];;false;;[];[]

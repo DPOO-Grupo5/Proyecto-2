@@ -1,2 +1,2 @@
-id;Usuario.login;Usuario.nombre;Usuario.puntosFidelidad;Usuario.password;Usuario.descuento;Usuario.transacciones;Administrador.sugerenciasAprobadas;Administrador.solicitudesAprobadas;Administrador.productosCatalogo
-6;admin;Administrador del club;0;pbkdf2$120000$0XUoe3ycbt5QrTTaDhyMgw\=\=$GxOsv5YHfr7B9TH1ThN80KxzgyeGRmmZMcxitNahq0M\=;0.0;[];[];[];[]
+id;Usuario.login;Usuario.nombre;Usuario.puntosFidelidad;Usuario.password;Usuario.descuento;Usuario.codigoGuardado;Usuario.transacciones;Administrador.sugerenciasAprobadas;Administrador.solicitudesAprobadas;Administrador.productosCatalogo
+6;admin;Administrador del club;0;pbkdf2$120000$0XUoe3ycbt5QrTTaDhyMgw\=\=$GxOsv5YHfr7B9TH1ThN80KxzgyeGRmmZMcxitNahq0M\=;0.0;;[];[];[];[]

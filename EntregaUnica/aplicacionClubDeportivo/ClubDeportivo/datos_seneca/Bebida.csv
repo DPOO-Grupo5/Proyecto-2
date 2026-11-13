@@ -1,3 +1,3 @@
 id;Producto.nombre;Producto.precio;Producto.existencias;Bebida.esCaliente
-32;Agua demo;3000.0;@120;false
-33;Café demo;4000.0;@121;true
+32;Agua demo;3000.0;@121;false
+33;Café demo;4000.0;@122;true

@@ -1,0 +1,2 @@
+id;Transaccion.fechaHora;Transaccion.rubro;Transaccion.subtotal;Transaccion.descuento;Transaccion.porcentajeCodigo;Transaccion.promocion;Transaccion.duenoCodigo;Transaccion.impuestos;Transaccion.porcentajePropina;Transaccion.propina;Transaccion.total;Transaccion.puntosFidelidad;Transaccion.puntosRedimidos;Transaccion.confirmada;Transaccion.comprador;Transaccion.detalles
+57;2026-11-13T17:18:55.957757200;tienda;50000.0;7500.0;0.15;CODIGO_PROPIO;@4;8075.0;0.0;0.0;50575.0;1011;0;true;@4;@125

@@ -1,8 +1,8 @@
-id;InscripcionDisciplina.nivel;InscripcionDisciplina.ranking;InscripcionDisciplina.socio;InscripcionDisciplina.disciplina;InscripcionDisciplina.fechaInscripcion;InscripcionDisciplina.fechaRetiro
-63;Avanzado;1000;@5;@42;2026-11-08;
-64;Principiante;1000;@5;@43;2026-11-08;
-72;Intermedio;1000;@8;@42;2026-11-08;
-73;Principiante;1000;@8;@43;2026-11-08;
-87;Principiante;1000;@15;@43;2026-11-08;
-102;Principiante;1000;@24;@42;2026-11-08;
-103;Principiante;1000;@24;@43;2026-11-08;
+id;InscripcionDisciplina.nivel;InscripcionDisciplina.ranking;InscripcionDisciplina.socio;InscripcionDisciplina.disciplina;InscripcionDisciplina.fechaInscripcion;InscripcionDisciplina.fechaRetiro;InscripcionDisciplina.historialRanking
+64;Avanzado;1000;@5;@42;2026-11-08;;[]
+65;Principiante;1000;@5;@43;2026-11-08;;[]
+73;Intermedio;1000;@8;@42;2026-11-08;;[]
+74;Principiante;1000;@8;@43;2026-11-08;;[]
+88;Principiante;1000;@15;@43;2026-11-08;;[]
+103;Principiante;1000;@24;@42;2026-11-08;;[]
+104;Principiante;1000;@24;@43;2026-11-08;;[]
