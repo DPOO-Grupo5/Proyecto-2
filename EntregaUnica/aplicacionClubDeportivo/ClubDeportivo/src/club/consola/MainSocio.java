@@ -41,7 +41,12 @@ public class MainSocio extends ConsolaComprador {
                 .seccion("Tienda y cafetería")
                 .opcion("8", "Comprar en la tienda", () -> comprar(socio, "tienda"))
                 .opcion("9", "Comprar en la cafetería", () -> comprar(socio, "cafeteria"))
-                .opcion("10", "Mis compras y puntos de fidelidad", () -> verCompras(socio));
+                .opcion("10", "Mis compras y puntos de fidelidad", () -> verCompras(socio))
+                .seccion("Más consultas")
+                .opcion("11", "Iniciar el uso de mi reserva", () -> iniciarUso(socio))
+                .opcion("12", "Mi ranking por disciplina", () -> verRanking(socio))
+                .opcion("13", "Competencias: tabla, goleadores y destacados", this::consultarCompetencias)
+                .opcion("14", "Mi código de descuento (guardar o quitar)", () -> codigoGuardado(socio));
     }
 
     private void verMisEquipos(Socio socio) {
@@ -53,6 +58,9 @@ public class MainSocio extends ConsolaComprador {
             Equipo e = i.getEquipo();
             System.out.printf("%s | %s | %s | posición: %s | camiseta: %d%n", e.getNombre(), e.getDeporte().getNombre(),
                     e.getCategoria().getNombre(), i.getPosicion(), i.getNumeroCamiseta());
+            int[] r = e.resumenResultados();
+            System.out.printf("   Resultados: PJ %d | G %d | E %d | P %d | GF %d | GC %d%s%n", r[0], r[1], r[2], r[3], r[4], r[5],
+                    r[0] == 0 ? " (no hay partidos jugados)" : "");
         }
         if (!alguno) System.out.println("No pertenece a ningún equipo.");
         System.out.println("--- Calendario y resultados ---");
@@ -163,5 +171,82 @@ public class MainSocio extends ConsolaComprador {
 
     private void verDesempeno(Socio socio) {
         VistaDesempeno.mostrar(socio);
+    }
+
+    /** HU-S05: valida el acceso a la reserva (bebida caliente en pádel o mesa techada). */
+    private void iniciarUso(Socio socio) {
+        List<Reserva> activas = new ArrayList<>();
+        for (Reserva r : socio.getReservas()) if (r.estaActiva(club.model.Reloj.ahora())) activas.add(r);
+        if (activas.isEmpty()) { System.out.println("No tiene reservas activas."); return; }
+        Reserva r = elegir("Su reserva:", activas,
+                x -> x.getInstalacion().getNombre() + " | " + x.getFechaHoraInicio() + " a " + x.getFechaHoraFin());
+        r.iniciarUso(socio, club.model.Reloj.ahora());
+        System.out.println("Uso de la reserva iniciado. ¡Buen juego!");
+    }
+
+    /** HU-S06: ELO y posición en una disciplina; se rechaza si el socio no está inscrito. */
+    private void verRanking(Socio socio) {
+        DisciplinaIndividual d = elegir("Disciplina:", sistema.getDisciplinas(), Formatos::nombreDisciplina);
+        int posicion = sistema.posicionRanking(d, socio);
+        InscripcionDisciplina i = socio.inscripcionEn(d);
+        System.out.printf("%s | ELO: %d | posición: %d%n", Formatos.nombreDisciplina(d), i.getRanking(), posicion);
+        if (!socio.tienePartidosEn(d)) System.out.println("Aún no tiene partidos jugados en esta disciplina.");
+    }
+
+    /** HU-S11 y HU-S12: tabla de posiciones, goleadores y jugador destacado de una competencia. */
+    private void consultarCompetencias() {
+        String deporte = textoOpcional("Filtrar por deporte (Enter = todos): ");
+        String categoria = textoOpcional("Filtrar por categoría (Enter = todas): ");
+        List<Competencia> lista = new ArrayList<>();
+        for (Competencia c : sistema.getCompetencias()) {
+            if (!deporte.isEmpty() && !c.getDeporte().getNombre().equalsIgnoreCase(deporte)) continue;
+            if (!categoria.isEmpty() && !c.getCategoria().getNombre().equalsIgnoreCase(categoria)) continue;
+            lista.add(c);
+        }
+        if (lista.isEmpty()) { System.out.println("No hay información de competencias para ese filtro."); return; }
+        Competencia c = elegir("Competencia:", lista, x -> x.getNombre() + " " + x.getTemporada() + " (" + x.getDeporte().getNombre() + ", " + x.getCategoria().getNombre() + ")");
+        int op = entero("1) Tabla de posiciones   2) Goleadores   3) Jugador destacado: ");
+        if (!c.tieneResultados()) { System.out.println("No hay información: la competencia aún no tiene resultados."); return; }
+        if (op == 1) {
+            if (c.getFormato() instanceof FormatoLiga) {
+                FormatoLiga liga = (FormatoLiga) c.getFormato();
+                liga.actualizarPosiciones();
+                Formatos.imprimirTabla("Tabla de posiciones", liga.getPosiciones());
+            } else if (c.getFormato() instanceof FormatoPorFases) {
+                FormatoPorFases fases = (FormatoPorFases) c.getFormato();
+                if (fases.getFaseGrupos() != null) for (Grupo g : fases.getFaseGrupos().getGrupos()) {
+                    g.actualizarPosiciones();
+                    Formatos.imprimirTabla(g.getNombre(), g.getPosiciones());
+                }
+                if (fases.getFaseEliminacion() != null && !fases.getFaseEliminacion().getRondas().isEmpty()) {
+                    RondaEliminacion primera = fases.getFaseEliminacion().getRondas().get(0);
+                    System.out.println("Clasificados a eliminación (" + primera.getNombre() + "):");
+                    for (PartidoCompetencia p : primera.getPartidos()) System.out.println("   " + Formatos.nombresEquipos(p));
+                } else System.out.println("La fase de eliminación aún no se ha generado.");
+            }
+        } else if (op == 2) {
+            List<Map.Entry<Socio, Integer>> goleadores = c.clasificacionGoleadores();
+            if (goleadores.isEmpty()) System.out.println("No hay información de goleadores en esta competencia.");
+            for (Map.Entry<Socio, Integer> e : goleadores) System.out.printf("%s: %d goles%n", e.getKey().getNombre(), e.getValue());
+        } else if (op == 3) {
+            String criterio = c.getDeporte() instanceof Futbol ? "asistencias" : c.getDeporte() instanceof Baloncesto ? "puntos" : "aces";
+            List<Map.Entry<Socio, Integer>> destacados = c.clasificacionDestacados();
+            if (destacados.isEmpty()) System.out.println("No hay información de jugadores destacados en esta competencia.");
+            for (Map.Entry<Socio, Integer> e : destacados) System.out.printf("%s: %d %s%n", e.getKey().getNombre(), e.getValue(), criterio);
+        } else throw new IllegalArgumentException("Opción no válida.");
+    }
+
+    /** Guarda el código que un empleado compartió con el socio, para aplicarlo sin escribirlo en cada compra. */
+    private void codigoGuardado(Socio socio) {
+        System.out.println(socio.getCodigoGuardado() == null ? "No tiene un código guardado."
+                : "Código guardado: " + socio.getCodigoGuardado() + " (8 % en tienda y cafetería).");
+        int op = entero("1) Guardar un código   2) Quitar el código guardado   0) Volver: ");
+        if (op == 1) {
+            socio.guardarCodigo(texto("Código que le compartió un empleado: "), sistema.getEmpleados());
+            System.out.println("Código guardado. Se le ofrecerá en cada compra.");
+        } else if (op == 2) {
+            socio.olvidarCodigoGuardado();
+            System.out.println("Código quitado.");
+        } else if (op != 0) throw new IllegalArgumentException("Opción no válida.");
     }
 }

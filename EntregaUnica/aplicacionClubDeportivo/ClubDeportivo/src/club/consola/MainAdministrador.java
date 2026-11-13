@@ -67,7 +67,12 @@ public class MainAdministrador extends ConsolaBase {
         String password = texto("Contraseña: ");
         Usuario nuevo;
         switch (tipo) {
-            case "socio": nuevo = new Socio(login, password, nombre, fecha("Fecha de nacimiento (AAAA-MM-DD): ")); break;
+            case "socio": {
+                Socio socio = new Socio(login, password, nombre, fecha("Fecha de nacimiento (AAAA-MM-DD): "));
+                socio.setDocumento(texto("Documento: "));
+                nuevo = socio;
+                break;
+            }
             case "entrenador": nuevo = new Entrenador(login, password, nombre, texto("Código de descuento: ")); break;
             case "fisioterapeuta": nuevo = new Fisioterapeuta(login, password, nombre, texto("Código de descuento: ")); break;
             case "administrador": nuevo = new Administrador(login, password, nombre); break;
@@ -100,7 +105,7 @@ public class MainAdministrador extends ConsolaBase {
 
     private void darDeBajaEquipo(Administrador admin) {
         Equipo e = elegir("Equipo a dar de baja:", sistema.getEquiposActivos(), Formatos::etiquetaEquipo);
-        admin.darDeBajaEquipo(e);
+        admin.darDeBajaEquipo(e, sistema);
         System.out.println("Equipo dado de baja (se conserva su historial).");
     }
 
@@ -172,10 +177,7 @@ public class MainAdministrador extends ConsolaBase {
             if (s == null) throw new IllegalArgumentException("El socio " + login.trim() + " no pertenece al equipo.");
             nomina.add(s);
         }
-        if (nomina.size() < c.getDeporte().getMinJugadores())
-            throw new IllegalStateException("La nómina mínima es de " + c.getDeporte().getMinJugadores() + " jugadores.");
-        c.agregarEquipo(equipo);
-        c.registrarNomina(equipo, nomina);
+        c.inscribirEquipoConNomina(equipo, nomina);
         System.out.println("Equipo inscrito con una nómina de " + nomina.size() + " jugadores.");
     }
 
@@ -237,24 +239,68 @@ public class MainAdministrador extends ConsolaBase {
     }
 
     private void consultarInventario(Administrador admin) {
-        int op = entero("1) Inventario   2) Reservas   3) Partidos   4) Sesiones de entrenamiento: ");
-        if (op == 1) System.out.println(admin.estadoInventario(sistema));
-        else if (op == 2) {
-            List<Reserva> reservas = admin.historialReservas(sistema);
-            if (reservas.isEmpty()) System.out.println("Sin reservas.");
-            for (Reserva r : reservas) System.out.printf("%s a %s | %s | %s | %d jugadores%n", r.getFechaHoraInicio(), r.getFechaHoraFin(),
-                    r.getInstalacion().getNombre(), r.getSocioResponsable() == null ? "-" : r.getSocioResponsable().getNombre(), r.getCantidadJugadores());
+        int op = entero("1) Inventario   2) Reservas   3) Partidos   4) Sesiones de entrenamiento   5) Partidos de práctica: ");
+        if (op == 1) {
+            System.out.println(admin.estadoInventario(sistema, textoOpcional("Ubicación (tienda/cafeteria/bodega, Enter = todas): ")));
+            return;
+        }
+        if (op < 2 || op > 5) throw new IllegalArgumentException("Opción no válida.");
+        LocalDate desde = fecha("Desde (AAAA-MM-DD): ");
+        LocalDate hasta = fecha("Hasta (AAAA-MM-DD): ");
+        boolean vacio = true;
+        if (op == 2) {
+            for (Reserva r : admin.historialReservas(sistema, desde, hasta, socioOpcional(), disciplinaOpcional())) {
+                vacio = false;
+                System.out.printf("%s a %s | %s | %s | %d jugadores%n", r.getFechaHoraInicio(), r.getFechaHoraFin(),
+                        r.getInstalacion().getNombre(), r.getSocioResponsable() == null ? "-" : r.getSocioResponsable().getNombre(), r.getCantidadJugadores());
+            }
         } else if (op == 3) {
-            for (PartidoInterno p : admin.historialPartidosInternos(sistema))
+            Entrenador e = entrenadorOpcional();
+            for (PartidoInterno p : admin.historialPartidosInternos(sistema, desde, hasta, e)) {
+                vacio = false;
                 System.out.printf("[Interno] %s | %s vs %s | %s%n", p.getFechaHora(), p.getEquipoLocal().getNombre(), p.getEquipoVisitante().getNombre(), p.getMarcadorFinal());
-            for (PartidoCompetencia p : admin.historialPartidosCompetencia(sistema))
+            }
+            for (PartidoCompetencia p : admin.historialPartidosCompetencia(sistema, desde, hasta, e)) {
+                vacio = false;
                 System.out.printf("[Competencia] %s | %s | %s%n", p.getFecha(), Formatos.nombresEquipos(p), p.getMarcador());
+            }
         } else if (op == 4) {
-            List<SesionEntrenamiento> sesiones = admin.historialSesiones(sistema);
-            if (sesiones.isEmpty()) System.out.println("Sin sesiones.");
-            for (SesionEntrenamiento s : sesiones) System.out.printf("%s | %s | entrenador: %s | %d convocados%n", s.getFechaHora(),
-                    s.getInstalacion().getNombre(), s.getEntrenador().getNombre(), s.getConvocados().size());
-        } else throw new IllegalArgumentException("Opción no válida.");
+            Entrenador e = entrenadorOpcional();
+            for (SesionEntrenamiento s : admin.historialSesiones(sistema, desde, hasta, e, disciplinaOpcional())) {
+                vacio = false;
+                System.out.printf("%s | %s | entrenador: %s | %d convocados%n", s.getFechaHora(),
+                        s.getInstalacion().getNombre(), s.getEntrenador().getNombre(), s.getConvocados().size());
+            }
+        } else {
+            for (PartidoPractica p : admin.historialPracticas(sistema, desde, hasta, socioOpcional(), disciplinaOpcional())) {
+                vacio = false;
+                System.out.printf("[Práctica] %s | %s | sets %d-%d%n", p.getFechaHora(), Formatos.etiquetaPractica(p), p.getSetsLadoA(), p.getSetsLadoB());
+            }
+        }
+        if (vacio) System.out.println("No hay registros en ese periodo.");
+    }
+
+    private Socio socioOpcional() {
+        String login = textoOpcional("Filtrar por socio (login, Enter = todos): ");
+        if (login.isEmpty()) return null;
+        Usuario u = sistema.buscarUsuario(login);
+        if (!(u instanceof Socio)) throw new IllegalArgumentException("No existe un socio con ese login.");
+        return (Socio) u;
+    }
+
+    private Entrenador entrenadorOpcional() {
+        String login = textoOpcional("Filtrar por entrenador (login, Enter = todos): ");
+        if (login.isEmpty()) return null;
+        Usuario u = sistema.buscarUsuario(login);
+        if (!(u instanceof Entrenador)) throw new IllegalArgumentException("No existe un entrenador con ese login.");
+        return (Entrenador) u;
+    }
+
+    private DisciplinaIndividual disciplinaOpcional() {
+        String nombre = textoOpcional("Filtrar por disciplina (Enter = todas): ");
+        if (nombre.isEmpty()) return null;
+        for (DisciplinaIndividual d : sistema.getDisciplinas()) if (Formatos.nombreDisciplina(d).equalsIgnoreCase(nombre)) return d;
+        throw new IllegalArgumentException("No existe la disciplina " + nombre + ".");
     }
 
     private void gestionarInventario(Administrador admin) {
@@ -275,8 +321,13 @@ public class MainAdministrador extends ConsolaBase {
         SugerenciaProducto s = elegir("Sugerencias pendientes:", pendientes,
                 x -> x.getProducto().getNombre() + " - $" + (long) x.getProducto().getPrecio() + " (" + x.getProducto().getClass().getSimpleName() + ")");
         boolean aprobar = confirmar("¿Aprobar la sugerencia?");
-        admin.resolverSugerencia(s, aprobar, sistema);
-        System.out.println(aprobar ? "Aprobada: el producto entró al catálogo (reabastézcalo desde la opción 13)." : "Sugerencia rechazada.");
+        if (aprobar) {
+            admin.resolverSugerencia(s, true, sistema);
+            System.out.println("Aprobada: el producto entró al catálogo con cantidad 0 (reabastézcalo desde la opción 15).");
+        } else {
+            admin.rechazarSugerencia(s, texto("Motivo del rechazo: "));
+            System.out.println("Sugerencia rechazada. El empleado puede ver el motivo.");
+        }
     }
 
     /** HU-A11: edita un borrador de la programación (parte de los turnos vigentes) y lo publica si cumple la cobertura. */
@@ -334,32 +385,17 @@ public class MainAdministrador extends ConsolaBase {
     }
 
     private void reporteVentas(Administrador admin) {
-        String rubro = elegir("Rubro:", Arrays.asList("tienda", "cafeteria", "mensualidad", "todos"), x -> x);
+        String rubro = elegir("Rubro:", Arrays.asList("tienda", "cafeteria", "mensualidad"), x -> x);
         String periodo = elegir("Periodo:", Arrays.asList("diario", "semanal", "mensual"), x -> x);
         String ref = textoOpcional("Fecha de referencia AAAA-MM-DD (Enter para hoy): ");
-        LocalDate fecha = ref.isEmpty() ? LocalDate.now() : LocalDate.parse(ref);
-        List<Transaccion> todas = new ArrayList<>();
-        for (Usuario u : sistema.getUsuarios().values()) todas.addAll(u.consultarHistorialCompras());
-        Map<String, Double> reporte = admin.generarReporteVentas(todas, "todos".equals(rubro) ? null : rubro, periodo, fecha);
-        if (reporte.isEmpty()) System.out.println("Sin ventas en el periodo.");
-        for (Map.Entry<String, Double> e : reporte.entrySet()) System.out.printf("%s: $%.0f%n", e.getKey(), e.getValue());
+        LocalDate fecha = ref.isEmpty() ? club.model.Reloj.ahora().toLocalDate() : LocalDate.parse(ref);
+        System.out.println(admin.reporteVentasDetallado(sistema, rubro, periodo, fecha));
     }
 
     private void reporteDeportivo(Administrador admin) {
-        System.out.println(admin.generarReporteDeportivo(sistema.getSocios()));
-        System.out.println("--- Resultados de partidos ---");
-        for (PartidoInterno p : admin.historialPartidosInternos(sistema))
-            System.out.printf("[Interno] %s vs %s: %s%n", p.getEquipoLocal().getNombre(), p.getEquipoVisitante().getNombre(), p.getMarcadorFinal());
-        for (PartidoCompetencia p : admin.historialPartidosCompetencia(sistema))
-            if (p.isFinalizado()) System.out.printf("[Competencia] %s: %s%n", Formatos.nombresEquipos(p), p.getMarcador());
-        System.out.println("--- Rankings de disciplinas individuales ---");
-        for (DisciplinaIndividual d : sistema.getDisciplinas()) {
-            System.out.println(Formatos.nombreDisciplina(d) + ":");
-            List<InscripcionDisciplina> orden = new ArrayList<>();
-            for (InscripcionDisciplina i : d.getInscripciones()) if (i.isActiva()) orden.add(i);
-            orden.sort((x, y) -> Integer.compare(y.getRanking(), x.getRanking()));
-            for (InscripcionDisciplina i : orden) System.out.printf("   %-25s %-12s %d%n", i.getSocio().getNombre(), i.getNivel(), i.getRanking());
-        }
+        LocalDate desde = fecha("Desde (AAAA-MM-DD): ");
+        LocalDate hasta = fecha("Hasta (AAAA-MM-DD): ");
+        System.out.println(admin.reporteDeportivo(sistema, desde, hasta));
     }
 
     // ===================================================================== PROYECTO 2

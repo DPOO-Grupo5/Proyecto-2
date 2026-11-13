@@ -18,5 +18,8 @@ import org.junit.runners.Suite;
     club.historias.HistoriasPracticaTest.class,
     club.historias.HistoriasPartidoInternoTest.class,
     club.historias.HistoriasSesionesTest.class,
+    club.historias.HistoriasCierreBancoTest.class,
+    club.historias.HistoriasConsultasBancoTest.class,
+    club.historias.HistoriasCriteriosBancoTest.class,
 })
 public class TodasLasPruebas { }

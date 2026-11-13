@@ -30,6 +30,13 @@ public class InscripcionCompetencia implements java.io.Serializable {
         }
         if (!nomina.contains(socio)) nomina.add(socio);
     }
+    
+    public void validarNomina(int minimo) {
+        int habilitados = 0;
+        for (Socio s : nomina) if (!s.tieneSancionVigente()) habilitados++;
+        if (habilitados < minimo)
+            throw new IllegalStateException("Nómina insuficiente: faltan " + (minimo - habilitados) + " jugadores habilitados.");
+    }
 
     public boolean enNomina(Socio socio) { return nomina.contains(socio); }
     public List<Socio> getNomina() { return nomina; }

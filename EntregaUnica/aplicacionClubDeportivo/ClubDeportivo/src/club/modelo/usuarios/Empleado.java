@@ -97,5 +97,14 @@ public abstract class Empleado extends Usuario implements java.io.Serializable {
     public List<SolicitudCambioTurno> getSolicitudes() { return solicitudes; }
 
     public List<SugerenciaProducto> getSugerencias() { return sugerencias; }
+    
+    public SugerenciaProducto sugerirProducto(Producto p, String descripcion) {
+        if (p == null || p.getNombre() == null || p.getNombre().trim().isEmpty()) throw new IllegalArgumentException("Falta el nombre del producto.");
+        if (descripcion == null || descripcion.trim().isEmpty()) throw new IllegalArgumentException("Falta la descripción.");
+        SugerenciaProducto s = sugerirProducto(p);
+        s.setDescripcion(descripcion.trim());
+        s.setAutor(getNombre());
+        return s;
+    }
 
 }

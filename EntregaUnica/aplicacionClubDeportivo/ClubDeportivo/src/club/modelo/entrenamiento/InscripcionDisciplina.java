@@ -1,6 +1,9 @@
 package club.modelo.entrenamiento;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 import club.modelo.usuarios.Socio;
 
 public class InscripcionDisciplina implements java.io.Serializable {
@@ -12,6 +15,8 @@ public class InscripcionDisciplina implements java.io.Serializable {
     private DisciplinaIndividual disciplina;
     private LocalDate fechaInscripcion = LocalDate.now();
     private LocalDate fechaRetiro;
+    private List<String> historialRanking = new ArrayList<>();
+    public List<String> getHistorialRanking() { return historialRanking; }
 
     public InscripcionDisciplina(String nivel, int ranking, Socio socio, DisciplinaIndividual disciplina) {
         cambiarNivel(nivel);
@@ -20,7 +25,10 @@ public class InscripcionDisciplina implements java.io.Serializable {
         if (socio == null || disciplina == null) throw new IllegalArgumentException("El socio y la disciplina son obligatorios.");
         this.socio = socio;
         this.disciplina = disciplina;
+        historialRanking.add(club.model.Reloj.ahora().toLocalDate() + ":" + ranking);
+        
     }
+    
 
 
     public void cambiarNivel(String nuevoNivel) {
@@ -38,6 +46,7 @@ public class InscripcionDisciplina implements java.io.Serializable {
         if (rankingRival < 0) throw new IllegalArgumentException("El ranking rival no puede ser negativo.");
         double esperado = 1.0 / (1.0 + Math.pow(10.0, (rankingRival - ranking) / 400.0));
         ranking = Math.max(0, (int) Math.round(ranking + 32.0 * (resultado - esperado)));
+        historialRanking.add(club.model.Reloj.ahora().toLocalDate() + ":" + ranking);
     }
 
     public boolean puedeJugarCon(InscripcionDisciplina otra) {
@@ -68,6 +77,8 @@ public class InscripcionDisciplina implements java.io.Serializable {
             default: return -1;
         }
     }
+    
+    
 
     public boolean isActiva() { return fechaRetiro == null; }
     public LocalDate getFechaInscripcion() { return fechaInscripcion; }

@@ -163,6 +163,9 @@ public class Transaccion implements java.io.Serializable {
         if (detalles.isEmpty()) throw new IllegalStateException("La transacción no tiene productos.");
         recalcular();
         validarProductosDelRubro();
+        for (DetalleTransaccion d : detalles)
+            if (d.getProducto() instanceof Snack && ((Snack) d.getProducto()).getAlergenos().isEmpty())
+                throw new IllegalStateException("El snack '" + d.getProducto().getNombre() + "' no tiene alérgenos registrados.");
         validarExistencias();
         if (contieneBebidaCaliente() && comprador instanceof Socio
                 && ((Socio) comprador).estaEnZonaRestringidaParaBebidasCalientes(fechaHora)) {

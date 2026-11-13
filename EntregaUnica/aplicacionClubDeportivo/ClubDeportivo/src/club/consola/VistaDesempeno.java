@@ -22,7 +22,10 @@ public final class VistaDesempeno {
     public static void mostrar(Socio socio) {
         System.out.printf("Porcentaje de asistencia: %.1f%%%n", socio.getPorcentajeAsistencia());
         System.out.println("--- Asistencias y evaluaciones ---");
-        if (socio.getAsistencias().isEmpty()) System.out.println("Sin registros.");
+        java.util.List<SesionEntrenamiento> pendientes = socio.sesionesPendientesDeAsistencia();
+        if (socio.getAsistencias().isEmpty() && pendientes.isEmpty()) System.out.println("No hay registros de asistencia.");
+        for (SesionEntrenamiento p : pendientes)
+            System.out.printf("%s | pendiente (asistencia aún no registrada)%n", p.getFechaHora());
         for (Asistencia a : socio.getAsistencias()) {
             System.out.printf("%s | %s | nota: %s | %s%n", a.getSesion() == null ? "-" : a.getSesion().getFechaHora(), a.getEstado(),
                     a.getNotaDesempeno() == null ? "-" : a.getNotaDesempeno().toString(), a.getComentario() == null ? "" : a.getComentario());

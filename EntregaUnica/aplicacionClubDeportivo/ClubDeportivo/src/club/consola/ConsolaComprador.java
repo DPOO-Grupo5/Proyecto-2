@@ -66,6 +66,18 @@ public abstract class ConsolaComprador extends ConsolaBase {
      * puntos de fidelidad. Un código o una cantidad inválida se informa y se vuelve a preguntar.
      */
     private void elegirPromocion(Transaccion t, Usuario usuario) {
+        // Un empleado tiene su propio código y un socio puede haber guardado el que le compartieron: no se escribe de nuevo.
+        String predeterminado = usuario.getCodigoGuardado();
+        if (usuario instanceof Empleado && ((Empleado) usuario).isCodigoActivo()) predeterminado = ((Empleado) usuario).getCodigoDescuento();
+        if (predeterminado != null && !predeterminado.isEmpty() && confirmar("¿Aplicar su código de descuento " + predeterminado + "?")) {
+            try {
+                t.aplicarCodigoDescuento(predeterminado, sistema.getEmpleados());
+                System.out.printf("Código aplicado: descuento de $%.0f.%n", t.getDescuento());
+                return;
+            } catch (IllegalArgumentException e) {
+                System.out.println("  " + e.getMessage());
+            }
+        }
         while (true) {
             String codigo = textoOpcional("Código de descuento de empleado (Enter para omitir): ");
             if (codigo.isEmpty()) break;

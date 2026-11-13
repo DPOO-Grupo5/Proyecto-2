@@ -49,6 +49,11 @@ public class HistoriasAdministradorTest {
     }
 
     // ===================================================================== HU-A04 · Inscribir a un socio en un equipo
+    /** Equipo de un deporte con mínimo de 1 habilitado, para probar cupos pequeños (HU-A03 exige cupo >= mínimo). */
+    private Equipo equipoPequenoSub15(int cupo) {
+        return admin.crearEquipo("Séneca Sub-15", new club.modelo.competencias.Futbol("Fútbol", 1), sistema.obtenerCategoria("Sub-15"), cupo, sistema);
+    }
+
     private Equipo equipoSub15(int cupo) {
         Equipo e = admin.crearEquipo("Séneca Sub-15", sistema.obtenerDeporte("Fútbol"), sistema.obtenerCategoria("Sub-15"), cupo, sistema);
         return e;
@@ -95,7 +100,7 @@ public class HistoriasAdministradorTest {
 
     @Test
     public void a04_rechazoPorCupo_equipoLleno() {
-        Equipo equipo = equipoSub15(1);
+        Equipo equipo = equipoPequenoSub15(1);
         admin.inscribirJugadorEnEquipo(Fabrica.socioConEdad("uno", 14), equipo, "delantero", 9);
         IllegalStateException e = assertThrows(IllegalStateException.class,
                 () -> admin.inscribirJugadorEnEquipo(Fabrica.socioConEdad("dos", 14), equipo, "portero", 1));
@@ -117,7 +122,7 @@ public class HistoriasAdministradorTest {
     // ===================================================================== HU-A05 · Dar de baja a un jugador
     @Test
     public void a05_exito_liberaCupoYCamisetaYConservaElHistorial() {
-        Equipo equipo = equipoSub15(1);
+        Equipo equipo = equipoPequenoSub15(1);
         Socio juan = Fabrica.socioConEdad("juan", 14);
         admin.inscribirJugadorEnEquipo(juan, equipo, "delantero", 9);
 

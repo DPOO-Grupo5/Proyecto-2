@@ -36,6 +36,14 @@ public class Reserva implements java.io.Serializable {
     public boolean estaActiva(LocalDateTime ahora) {
         return fechaHoraFin != null && ahora != null && fechaHoraFin.isAfter(ahora);
     }
+    
+    public void iniciarUso(Socio socio, LocalDateTime ahora) {
+        if (!incluye(socio)) throw new IllegalArgumentException("El socio no pertenece a la reserva.");
+        if (!estaActiva(ahora)) throw new IllegalStateException("La reserva no está activa.");
+        boolean restringida = instalacion instanceof CanchaPadel || (instalacion instanceof MesaTenisMesa && instalacion.isTechada());
+        if (restringida && socio.tieneBebidaCalienteReciente(ahora))
+            throw new IllegalStateException("No puede iniciar el uso con una bebida caliente reciente.");
+    }
 
     public club.modelo.entrenamiento.PartidoPractica getPartidoPractica() { return partidoPractica; }
 

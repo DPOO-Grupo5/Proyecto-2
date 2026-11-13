@@ -47,6 +47,7 @@ public abstract class ConsolaBase {
     public final void iniciar() {
         sistema = archivo.existeEstado() ? archivo.cargarEstado() : new SistemaClub();
         DatosIniciales.completar(sistema);
+        sistema.completarDatosFaltantes();
         guardar();
         try (Scanner scanner = new Scanner(System.in)) {
             entrada = new EntradaConsola(scanner, System.out);

@@ -29,4 +29,19 @@ public class SugerenciaProducto implements java.io.Serializable {
     public Producto getProducto() { return producto; }
 
     public void setProducto(Producto producto) { this.producto = producto; }
+    
+    private String autor, descripcion, motivoRechazo;
+    
+    public String getAutor() { return autor; }
+    public String getDescripcion() { return descripcion; }
+    public String getMotivoRechazo() { return motivoRechazo; }
+    public void setAutor(String a) { this.autor = a; }
+    public void setDescripcion(String d) { this.descripcion = d; }
+    public void rechazar(String motivo) {
+        if (motivo == null || motivo.trim().isEmpty()) throw new IllegalArgumentException("El motivo del rechazo es obligatorio.");
+        this.estado = "RECHAZADO";
+        this.motivoRechazo = motivo.trim();
+    }
+    
+    
 }

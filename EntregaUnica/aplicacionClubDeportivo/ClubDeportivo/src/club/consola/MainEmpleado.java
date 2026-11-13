@@ -80,10 +80,18 @@ public class MainEmpleado extends ConsolaComprador {
     private void verMiCodigo(Empleado empleado) {
         System.out.println("Su código de descuento: " + empleado.getCodigoDescuento() + (empleado.isCodigoActivo() ? " (activo)" : " (inactivo)"));
         System.out.println("Usted obtiene 15 % al usarlo en sus compras; cualquier otra persona que lo use obtiene 8 %.");
+        System.out.println("Al comprar se le ofrece automáticamente: no tiene que escribirlo.");
         System.out.println("El descuento no se acumula con puntos de fidelidad ni con bonos de torneo.");
     }
 
     private void sugerirProducto(Empleado empleado) {
+        if (!empleado.getSugerencias().isEmpty()) {
+            System.out.println("--- Mis sugerencias ---");
+            for (SugerenciaProducto s : empleado.getSugerencias())
+                System.out.printf("%s | %s%s%n", s.getProducto() == null ? "-" : s.getProducto().getNombre(), s.getEstado(),
+                        s.getMotivoRechazo() == null ? "" : " | motivo: " + s.getMotivoRechazo());
+            if (!confirmar("¿Enviar una nueva sugerencia?")) return;
+        }
         String tipo = texto("Tipo (tienda/bebida/snack): ").toLowerCase();
         String nombre = texto("Nombre: ");
         double precio = decimal("Precio: ");
@@ -92,14 +100,15 @@ public class MainEmpleado extends ConsolaComprador {
             case "tienda": p = new ProductoTienda(nombre, precio, texto("Categoría: ")); break;
             case "bebida": p = new Bebida(nombre, precio, confirmar("¿Es caliente?")); break;
             case "snack":
-                String lista = textoOpcional("Alérgenos separados por coma (Enter si no tiene): ");
+                String lista = texto("Alérgenos separados por coma (escriba 'ninguno' si no tiene): ");
                 List<String> alergenos = new ArrayList<>();
-                if (!lista.isEmpty()) for (String a : lista.split(",")) alergenos.add(a.trim());
+                for (String a : lista.split(",")) if (!a.trim().isEmpty()) alergenos.add(a.trim());
                 p = new Snack(nombre, precio, alergenos);
                 break;
             default: throw new IllegalArgumentException("Tipo de producto no reconocido.");
         }
-        empleado.sugerirProducto(p);
+        String descripcion = texto("Descripción: ");
+        empleado.sugerirProducto(p, descripcion);
         System.out.println("Sugerencia enviada al administrador.");
     }
 

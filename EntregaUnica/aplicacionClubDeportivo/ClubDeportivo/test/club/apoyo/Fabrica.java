@@ -27,7 +27,9 @@ public final class Fabrica {
     }
 
     public static Socio socioConEdad(String login, int edad) {
-        return new Socio(login, "clave123", "Socio " + login, LocalDate.now().minusYears(edad).minusDays(1));
+        Socio s = new Socio(login, "clave123", "Socio " + login, LocalDate.now().minusYears(edad).minusDays(1));
+        s.setDocumento("DOC-" + login);
+        return s;
     }
 
     public static Socio registrar(SistemaClub sistema, Socio socio) {
@@ -50,7 +52,7 @@ public final class Fabrica {
     }
 
     public static Equipo equipoFutbol(String nombre, Categoria categoria, int cupo) {
-        return new Equipo(nombre, new Futbol("Fútbol", 7), categoria, cupo);
+        return new Equipo(nombre, new Futbol("Fútbol", Math.min(7, Math.max(cupo, 1))), categoria, cupo);
     }
 
     public static Categoria abierta() { return new Categoria("Abierta", 0, 150); }

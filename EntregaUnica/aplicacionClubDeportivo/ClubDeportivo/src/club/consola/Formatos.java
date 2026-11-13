@@ -73,4 +73,12 @@ public final class Formatos {
         else if (p instanceof Snack) extra = " [snack, alérgenos: " + (((Snack) p).getAlergenos().isEmpty() ? "ninguno" : String.join(", ", ((Snack) p).getAlergenos())) + "]";
         return String.format("%s%s - $%.0f (disponibles: %d)", p.getNombre(), extra, p.getPrecio(), p.getCantidadTotal());
     }
+
+    public static void imprimirTabla(String titulo, java.util.List<club.modelo.competencias.PosicionEquipo> posiciones) {
+        System.out.println("--- " + titulo + " ---");
+        System.out.println("Pos Equipo                         PJ  G  E  P  GF  GC  Pts");
+        for (club.modelo.competencias.PosicionEquipo p : posiciones)
+            System.out.printf("%-3d %-30s %2d %2d %2d %2d %3d %3d %4d%n", p.getPosicion(), p.getEquipo().getNombre(), p.getPartidosJugados(),
+                    p.getVictorias(), p.getEmpates(), p.getDerrotas(), p.getTantosFavor(), p.getTantosContra(), p.getPuntuacion());
+    }
 }

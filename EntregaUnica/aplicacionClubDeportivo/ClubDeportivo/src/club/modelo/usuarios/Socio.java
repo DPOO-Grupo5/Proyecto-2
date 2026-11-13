@@ -38,6 +38,7 @@ public class Socio extends Usuario implements java.io.Serializable {
     private List<Sancion> sanciones = new ArrayList<>();
     private List<SesionEntrenamiento> sesionesConvocado = new ArrayList<>();
     private List<PartidoPractica> partidosPractica = new ArrayList<>();
+    private String documento;
 
     public Socio(String login, String password, String nombre, LocalDate fechaNacimiento) {
         super(login, password, nombre);
@@ -50,6 +51,25 @@ public class Socio extends Usuario implements java.io.Serializable {
     public int calcularEdad(LocalDate fechaReferencia) {
         if (this.fechaNacimiento == null) return 0;
         return Period.between(this.fechaNacimiento, fechaReferencia).getYears();
+    }
+    public String getDocumento() { return documento; }
+    public void setDocumento(String d) {
+        if (d == null || d.trim().isEmpty()) throw new IllegalArgumentException("El documento es obligatorio.");
+        this.documento = d.trim();
+    }
+    
+    public boolean tienePartidosEn(DisciplinaIndividual d) {
+        for (PartidoPractica p : partidosPractica) if (p.getDisciplina() == d && p.isResultadoRegistrado()) return true;
+        return false;
+    }
+    public List<SesionEntrenamiento> sesionesPendientesDeAsistencia() {
+        List<SesionEntrenamiento> r = new ArrayList<>();
+        for (SesionEntrenamiento s : sesionesConvocado) {
+            boolean tiene = false;
+            for (Asistencia a : asistencias) if (a.getSesion() == s) tiene = true; // ⚠️ confirma el getter de Asistencia
+            if (!tiene) r.add(s);
+        }
+        return r;
     }
 
     /** Inscribe al socio en una academia individual con el nivel inicial que indica y ELO 1000 (HU-S02). */

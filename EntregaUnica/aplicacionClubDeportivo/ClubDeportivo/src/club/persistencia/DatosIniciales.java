@@ -84,16 +84,21 @@ public final class DatosIniciales {
         admin.publicarProgramacion(p);
     }
 
+    private static Socio conDocumento(Socio socio, String documento) {
+        socio.setDocumento(documento);
+        return socio;
+    }
+
     private static List<Socio> crearSocios(SistemaClub sistema) {
         List<Socio> socios = new ArrayList<>();
-        socios.add(registrar(sistema, new Socio("socio.demo", "demo123", "Ana Torres", LocalDate.of(2000, 1, 1))));
-        socios.add(registrar(sistema, new Socio("socio.demo2", "demo123", "Juan Medina", LocalDate.of(2001, 5, 20))));
+        socios.add(registrar(sistema, conDocumento(new Socio("socio.demo", "demo123", "Ana Torres", LocalDate.of(2000, 1, 1)), "1000000001")));
+        socios.add(registrar(sistema, conDocumento(new Socio("socio.demo2", "demo123", "Juan Medina", LocalDate.of(2001, 5, 20)), "1000000002")));
         String[] nombres = { "Pablo Ríos", "Camila Vargas", "Felipe León", "Daniela Mora", "Santiago Gil", "Isabela Cruz",
                 "Tomás Reyes", "Mariana Díaz", "Nicolás Peña", "Lucía Romero", "Emilio Suárez", "Paula Ortiz",
                 "Gabriel Rincón", "Sara Molina" };
         for (int i = 0; i < nombres.length; i++) {
             String login = String.format("jugador%02d", i + 1);
-            socios.add(registrar(sistema, new Socio(login, "demo123", nombres[i], LocalDate.of(1998 + i % 6, 1 + i % 12, 10))));
+            socios.add(registrar(sistema, conDocumento(new Socio(login, "demo123", nombres[i], LocalDate.of(1998 + i % 6, 1 + i % 12, 10)), String.format("11000%05d", i + 1))));
         }
         return socios;
     }

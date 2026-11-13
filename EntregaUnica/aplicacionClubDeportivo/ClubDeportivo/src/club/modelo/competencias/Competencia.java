@@ -88,9 +88,37 @@ public class Competencia implements java.io.Serializable {
         InscripcionCompetencia inscripcion = null;
         for (InscripcionCompetencia i : inscripciones) if (i.getEquipo() == equipo) inscripcion = i;
         if (inscripcion == null) throw new IllegalArgumentException("El equipo no está inscrito en la competencia.");
-        if (jugadores == null || jugadores.size() < deporte.getMinJugadores())
-            throw new IllegalStateException("La nómina no alcanza el mínimo de jugadores.");
+        if (jugadores == null) throw new IllegalArgumentException("La nómina es obligatoria.");
+        int habilitados = 0;
+        for (Socio s : jugadores) if (!s.tieneSancionVigente()) habilitados++;
+        if (habilitados < deporte.getMinJugadores())
+            throw new IllegalStateException("La nómina no alcanza el mínimo de jugadores habilitados: faltan "
+                    + (deporte.getMinJugadores() - habilitados) + " (los suspendidos no cuentan).");
         for (Socio s : jugadores) inscripcion.registrarEnNomina(s);
+    }
+
+    /**
+     * HU-A18: inscribe un equipo del club junto con su nómina como una sola operación. Si cualquier validación falla
+     * (categoría, deporte, duplicado, nómina ajena o insuficiente) el equipo no queda inscrito.
+     */
+    public void inscribirEquipoConNomina(Equipo equipo, List<Socio> nomina) {
+        agregarEquipo(equipo);
+        InscripcionCompetencia inscripcion = inscripciones.get(inscripciones.size() - 1);
+        try {
+            if (nomina == null) throw new IllegalArgumentException("La nómina es obligatoria.");
+            for (Socio s : nomina) inscripcion.registrarEnNomina(s);
+            inscripcion.validarNomina(deporte.getMinJugadores());
+        } catch (RuntimeException ex) {
+            inscripciones.remove(inscripcion);
+            equipos.remove(equipo);
+            throw ex;
+        }
+    }
+
+    /** Indica si al menos un partido de la competencia ya tiene resultado. */
+    public boolean tieneResultados() {
+        for (PartidoCompetencia p : partidos) if (p.isFinalizado()) return true;
+        return false;
     }
 
     /** La competencia está en curso mientras no tenga calendario o le queden partidos sin resultado. */
@@ -121,12 +149,9 @@ public class Competencia implements java.io.Serializable {
         for (PartidoCompetencia p : partidos) {
             for (EstadisticaJugadorPartido e : p.getEstadisticas()) {
                 int valor = 0;
-                if (e instanceof EstadisticaJugadorFutbol)
-                    valor = ((EstadisticaJugadorFutbol) e).getGoles() + ((EstadisticaJugadorFutbol) e).getAsistencias();
-                else if (e instanceof EstadisticaJugadorBaloncesto)
-                    valor = ((EstadisticaJugadorBaloncesto) e).getPuntos() + ((EstadisticaJugadorBaloncesto) e).getRebotes();
-                else if (e instanceof EstadisticaJugadorVoleibol)
-                    valor = ((EstadisticaJugadorVoleibol) e).getAces() + ((EstadisticaJugadorVoleibol) e).getBloqueos();
+                if (e instanceof EstadisticaJugadorFutbol)          valor = ((EstadisticaJugadorFutbol) e).getAsistencias();
+                else if (e instanceof EstadisticaJugadorBaloncesto) valor = ((EstadisticaJugadorBaloncesto) e).getPuntos();
+                else if (e instanceof EstadisticaJugadorVoleibol)   valor = ((EstadisticaJugadorVoleibol) e).getAces();
                 puntos.merge(e.getJugador(), valor, Integer::sum);
             }
         }

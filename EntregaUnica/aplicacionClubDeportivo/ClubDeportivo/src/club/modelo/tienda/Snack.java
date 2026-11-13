@@ -9,7 +9,7 @@ public class Snack extends ProductoCafeteria implements java.io.Serializable {
 
     public Snack(String nombre, double precio, List<String> alergenos) {
         super(nombre, precio);
-        this.alergenos = new ArrayList<String>();
+        this.alergenos = alergenos == null ? new ArrayList<String>() : new ArrayList<String>(alergenos);
     }
 
     public List<String> getAlergenos() { return alergenos; }

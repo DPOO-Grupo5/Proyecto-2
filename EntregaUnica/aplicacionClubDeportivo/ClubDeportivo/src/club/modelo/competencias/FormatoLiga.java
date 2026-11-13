@@ -68,11 +68,26 @@ public class FormatoLiga extends Formato implements java.io.Serializable {
     private void ordenarPosiciones() {
         posiciones.sort((a, b) -> {
             int cmp = Integer.compare(b.getPuntuacion(), a.getPuntuacion());
+            if (cmp == 0) cmp = Integer.compare(puntosDirectos(b.getEquipo(), a.getEquipo()), puntosDirectos(a.getEquipo(), b.getEquipo()));
             if (cmp == 0) cmp = Integer.compare(b.getTantosFavor() - b.getTantosContra(), a.getTantosFavor() - a.getTantosContra());
             if (cmp == 0) cmp = a.getEquipo().getNombre().compareToIgnoreCase(b.getEquipo().getNombre());
             return cmp;
         });
         for (int i = 0; i < posiciones.size(); i++) posiciones.get(i).setPosicion(i + 1);
+    }
+    
+    private int puntosDirectos(EquipoCompetencia x, EquipoCompetencia y) {
+        int pts = 0;
+        for (PartidoCompetencia p : encuentros) {
+            if (!p.isFinalizado() || p.getEquipos().size() != 2) continue;
+            EquipoCompetencia l = p.getEquipos().get(0), v = p.getEquipos().get(1);
+            boolean xLocal = l == x && v == y, xVisita = v == x && l == y;
+            if (!xLocal && !xVisita) continue;
+            int gx = xLocal ? p.getMarcadorLocal() : p.getMarcadorVisitante();
+            int gy = xLocal ? p.getMarcadorVisitante() : p.getMarcadorLocal();
+            pts += gx > gy ? regla.getVictoria() : (gx == gy ? regla.getEmpate() : regla.getDerrota());
+        }
+        return pts;
     }
 
     public ReglaPuntuacion getRegla() { return regla; }

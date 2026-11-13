@@ -15,6 +15,7 @@ import club.modelo.competencias.Equipo;
 import club.modelo.competencias.Futbol;
 import club.modelo.competencias.Voleibol;
 import club.modelo.entrenamiento.DisciplinaIndividual;
+import club.modelo.entrenamiento.InscripcionDisciplina;
 import club.modelo.instalaciones.Instalacion;
 import club.modelo.tienda.PagoMensualidad;
 import club.modelo.tienda.Producto;
@@ -38,6 +39,13 @@ public class SistemaClub implements java.io.Serializable {
         String login = usuario.getLogin().trim();
         usuario.setLogin(login);
         for (String registrado : usuarios.keySet()) if (registrado.equalsIgnoreCase(login)) throw new IllegalArgumentException("El login ya está registrado.");
+        if (usuario instanceof club.modelo.usuarios.Socio) {
+            String doc = ((club.modelo.usuarios.Socio) usuario).getDocumento();
+            if (doc == null || doc.trim().isEmpty()) throw new IllegalArgumentException("El documento es obligatorio.");
+            for (Usuario u : usuarios.values())
+                if (u instanceof club.modelo.usuarios.Socio && doc.equalsIgnoreCase(((club.modelo.usuarios.Socio) u).getDocumento()))
+                    throw new IllegalArgumentException("El documento ya está registrado.");
+        }
         usuarios.put(login, usuario);
     }
 
@@ -45,6 +53,16 @@ public class SistemaClub implements java.io.Serializable {
         if (login == null || password == null) return null;
         Usuario usuario = buscarUsuario(login);
         return usuario != null && usuario.validarPassword(password) ? usuario : null;
+    }
+    public void completarDatosFaltantes() {
+        for (Usuario u : usuarios.values())
+            if (u instanceof club.modelo.usuarios.Socio) {
+                club.modelo.usuarios.Socio s = (club.modelo.usuarios.Socio) u;
+                if (s.getDocumento() == null || s.getDocumento().trim().isEmpty()) s.setDocumento("SIN-DOC-" + s.getLogin());
+            }
+        for (Producto p : productos)
+            if (p instanceof club.modelo.tienda.Snack && ((club.modelo.tienda.Snack) p).getAlergenos().isEmpty())
+                ((club.modelo.tienda.Snack) p).setAlergenos(new ArrayList<>(java.util.Arrays.asList("Ninguno")));
     }
 
     public Usuario buscarUsuario(String login) {
@@ -61,7 +79,9 @@ public class SistemaClub implements java.io.Serializable {
 
     public void registrarEquipo(Equipo equipo) {
         validarNoRegistrado(equipos, equipo, "equipo");
-        for (Equipo existente : equipos) if (existente.getNombre().equalsIgnoreCase(equipo.getNombre())) throw new IllegalArgumentException("Ya hay un equipo con ese nombre.");
+        for (Equipo e : equipos)
+            if (e.getNombre().equalsIgnoreCase(equipo.getNombre()) && e.getDeporte() == equipo.getDeporte() && e.getCategoria() == equipo.getCategoria())
+                throw new IllegalArgumentException("Ya existe un equipo con ese nombre, deporte y categoría.");
         equipos.add(equipo);
     }
     public void registrarCompetencia(Competencia competencia) {
@@ -161,6 +181,18 @@ public class SistemaClub implements java.io.Serializable {
             case "Mayores": return new Categoria("Mayores", 18, 150);
             default: throw new IllegalArgumentException("Categoría no reconocida: " + nombre);
         }
+    }
+    
+    public int posicionRanking(DisciplinaIndividual d, club.modelo.usuarios.Socio socio) {
+        InscripcionDisciplina mia = socio.inscripcionEn(d);
+        if (mia == null || !mia.isActiva()) throw new IllegalStateException("No estás inscrito en esa disciplina.");
+        int pos = 1;
+        for (Usuario u : usuarios.values())
+            if (u instanceof club.modelo.usuarios.Socio && u != socio) {
+                InscripcionDisciplina o = ((club.modelo.usuarios.Socio) u).inscripcionEn(d);
+                if (o != null && o.isActiva() && o.getRanking() > mia.getRanking()) pos++;
+            }
+        return pos;
     }
 
     private static String sinTildes(String texto) {

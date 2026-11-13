@@ -21,6 +21,8 @@ public abstract class Usuario implements java.io.Serializable {
     protected int puntosFidelidad;
     protected String password;
     protected double descuento;
+    /** Código de descuento de un empleado que el usuario guardó para no escribirlo en cada compra. */
+    private String codigoGuardado;
 
     private List<Transaccion> transacciones = new ArrayList<>();
     private static final int ITERACIONES_PASSWORD = 120000;
@@ -33,6 +35,19 @@ public abstract class Usuario implements java.io.Serializable {
         setNombre(nombre);
         this.puntosFidelidad = 0; 
     }
+
+    public String getCodigoGuardado() { return codigoGuardado; }
+
+    /** Guarda un código de empleado activo; se rechaza si no existe o está inactivo. */
+    public void guardarCodigo(String codigo, java.util.Collection<? extends Empleado> empleados) {
+        if (codigo == null || codigo.trim().isEmpty()) throw new IllegalArgumentException("El código de descuento es obligatorio.");
+        Empleado dueno = null;
+        if (empleados != null) for (Empleado e : empleados) if (e.validarCodigo(codigo.trim())) dueno = e;
+        if (dueno == null || !dueno.isCodigoActivo()) throw new IllegalArgumentException("El código de descuento no existe o no está activo.");
+        this.codigoGuardado = dueno.getCodigoDescuento();
+    }
+
+    public void olvidarCodigoGuardado() { this.codigoGuardado = null; }
 
     public boolean validarPassword(String passwordIngresado) {
         if (this.password == null || passwordIngresado == null) return false;
